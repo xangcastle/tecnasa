@@ -1,0 +1,2 @@
+click==8.0.3
+pythondialog==3.5.2
