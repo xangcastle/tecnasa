@@ -4,11 +4,11 @@ from math import sin
 class Point:
 
     def __init__(self, x, y):
-        self.x = int(x)
-        self.y = int(y)
+        self.x = float(x)
+        self.y = float(y)
 
     def __str__(self):
-        return f'{self.x}, {self.y}'
+        return f'({self.x}, {self.y})'
 
     def distance(self, p2):
         return ((self.x - p2.x) ** 2) + ((self.y - p2.y) ** 2) ** 0.5
@@ -125,18 +125,23 @@ def task5():
     print(f'El número mas cercano al {a} es {b}')
 
 
-task5()
+# task5()
 
 
 def task6():
+    print('▦' * 50)
+    print("ejercicio 6")
     points = []
 
     def define_point(n):
         x, y = input(f'Ingresa el punto número {n} ejemplo: 3,4 \n').split(',')
         return Point(x, y)
 
-    for c in range(0, 5):
-        points.append(define_point(c))
+    while len(points) < 5:
+        try:
+            points.append(define_point(len(points) + 1))
+        except (ValueError, TypeError):
+            print('Favor ingresa las coordenadas del punto separadas por una coma')
 
     p1 = points.pop(0)
     p2 = points[0]
@@ -154,7 +159,7 @@ def task6():
     print(f'el punto mas cercano a {p1} es {p2}')
 
 
-# task6()
+task6()
 
 
 
