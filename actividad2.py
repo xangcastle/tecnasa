@@ -45,14 +45,19 @@ def task1():
     print(f'el valor maximo es {my_max(data)}')
 
 
-task1()
+# task1()
 
 
 def task2():
     print('▦' * 50)
-    print("ejercicio 1")
+    print("ejercicio 2")
     e = 2.54
-    l = 3
+    l = None
+    while not l:
+        try:
+            l = int(input('Ingresa el largo de uno de los lados del cuadrado en metros:\n'))
+        except (TypeError, ValueError):
+            print('Ingresa solo números')
     print(f'El perimetro en centimetros es {l * 4}')
     print(f'El area en pulgadas es {((l ** 2) * 100) / e}')
 
