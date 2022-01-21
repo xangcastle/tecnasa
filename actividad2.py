@@ -31,26 +31,30 @@ def my_max(data):
 
 
 def task1():
+    print('▦' * 50)
+    print("ejercicio 1")
     data = []
-    params_count = int(input("Please type the qty of numbers that you want to use: \n"))
+    params_count = int(input("Ingresa la cantidad de numeros que quieres usar: \n"))
     for p in range(0, params_count):
-        data.append(input(f'Please type the param {p + 1}'))
+        data.append(input(f'Ingresa el numero numero {p + 1}:\n'))
 
-    print(f'the min value is {my_min(data)}')
-    print(f'the max value is {my_max(data)}')
+    print(f'el valor minimo es {my_min(data)}')
+    print(f'el valor maximo es {my_max(data)}')
 
 
 task1()
 
 
 def task2():
+    print('▦' * 50)
+    print("ejercicio 1")
     e = 2.54
     l = 3
     print(f'El perimetro en centimetros es {l * 4}')
     print(f'El area en pulgadas es {((l ** 2) * 100) / e}')
 
 
-task2()
+# task2()
 
 
 def task3():
@@ -64,7 +68,7 @@ def task3():
         print("por favor ingresa solo números")
 
 
-task3()
+# task3()
 
 
 def task4():
@@ -80,7 +84,7 @@ def task4():
         print("por favor ingresa solo números")
 
 
-task4()
+# task4()
 
 
 def task5():
@@ -105,7 +109,7 @@ def task5():
     print(f'El número mas cercano al {a} es {b}')
 
 
-task5()
+# task5()
 
 
 def task6():
@@ -134,7 +138,7 @@ def task6():
     print(f'el punto mas cercano a {p1} es {p2}')
 
 
-task6()
+# task6()
 
 
 
