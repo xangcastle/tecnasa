@@ -101,14 +101,17 @@ def task4():
 
 
 def task5():
+    print('▦' * 50)
+    print("ejercicio 5")
     data = []
     while len(data) < 10:
         try:
-            x = int(f'Por favor ingresa el dato número {len(data) + 1}')
+            x = int(input(f'Por favor ingresa el dato número {len(data) + 1}:\n'))
             if x > 0:
                 data.append(x)
+            print('por favor ingresa solo números positivos')
         except (ValueError, TypeError):
-            pass
+            print('por favor ingresa solo números positivos')
 
     a = data[0]
     b = data[1]
