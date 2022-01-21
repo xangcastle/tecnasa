@@ -82,6 +82,8 @@ def task3():
 
 
 def task4():
+    print('▦' * 50)
+    print("ejercicio 4")
     b, h, a = 0, 0, 0
     while b <= 0 or h <= 0 or a <= 0:
         try:
@@ -95,7 +97,7 @@ def task4():
     print(f'Se está usando una escala en grados por compatibilidad con math module')
 
 
-task4()
+# task4()
 
 
 def task5():
@@ -120,7 +122,7 @@ def task5():
     print(f'El número mas cercano al {a} es {b}')
 
 
-# task5()
+task5()
 
 
 def task6():
