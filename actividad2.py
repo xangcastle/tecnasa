@@ -40,11 +40,17 @@ def task1():
     print(f'the max value is {my_max(data)}')
 
 
+task1()
+
+
 def task2():
     e = 2.54
     l = 3
     print(f'El perimetro en centimetros es {l * 4}')
     print(f'El area en pulgadas es {((l ** 2) * 100) / e}')
+
+
+task2()
 
 
 def task3():
@@ -58,6 +64,9 @@ def task3():
         print("por favor ingresa solo números")
 
 
+task3()
+
+
 def task4():
     try:
         b = int(input('Ingresa el valor en metros de la base del triangulo\n'))
@@ -69,6 +78,9 @@ def task4():
         print(f'Debes ingresar solo números positivos')
     except (TypeError, ValueError):
         print("por favor ingresa solo números")
+
+
+task4()
 
 
 def task5():
@@ -91,6 +103,9 @@ def task5():
                 b = data[n]
 
     print(f'El número mas cercano al {a} es {b}')
+
+
+task5()
 
 
 def task6():
@@ -119,7 +134,7 @@ def task6():
     print(f'el punto mas cercano a {p1} es {p2}')
 
 
-
+task6()
 
 
 
