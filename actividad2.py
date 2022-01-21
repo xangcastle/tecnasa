@@ -35,8 +35,11 @@ def task1():
     print("ejercicio 1")
     data = []
     params_count = int(input("Ingresa la cantidad de numeros que quieres usar: \n"))
-    for p in range(0, params_count):
-        data.append(int(input(f'Ingresa el numero numero {p + 1}:\n')))
+    while len(data) < params_count:
+        try:
+            data.append(int(input(f'Ingresa el numero numero {len(data) + 1}:\n')))
+        except (TypeError, ValueError):
+            print('Debes ingresar solo números')
 
     print(f'el valor minimo es {my_min(data)}')
     print(f'el valor maximo es {my_max(data)}')
