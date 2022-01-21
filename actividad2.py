@@ -78,23 +78,24 @@ def task3():
     print(f'El area en metros del triangulo es {(b * h) / 2}')
 
 
-task3()
+# task3()
 
 
 def task4():
-    try:
-        b = int(input('Ingresa el valor en metros de la base del triangulo\n'))
-        h = int(input('Ingresa el valor en metros de la altura del triangulo\n'))
-        a = int(input('Ingresa el valor en grados del ángulo que une ambos lados del triangulo\n'))
-        if a > 0 and b > 0 and h > 0:
-            print(f'El area en metros del triangulo es {b * h * sin(a)}')
-            print(f'Se está usando una escala en grados por compatibilidad con math module')
-        print(f'Debes ingresar solo números positivos')
-    except (TypeError, ValueError):
-        print("por favor ingresa solo números")
+    b, h, a = 0, 0, 0
+    while b <= 0 or h <= 0 or a <= 0:
+        try:
+            b = int(input('Ingresa el valor del primer lado del triangulo\n'))
+            h = int(input('Ingresa el valor del segundo lado del triangulo\n'))
+            a = int(input('Ingresa el valor en grados del ángulo que une ambos lados del triangulo\n'))
+        except (TypeError, ValueError):
+            print(f'Debes ingresar solo números positivos')
+
+    print(f'El area en metros del triangulo es {(b * h * sin(a)) / 2}')
+    print(f'Se está usando una escala en grados por compatibilidad con math module')
 
 
-# task4()
+task4()
 
 
 def task5():
