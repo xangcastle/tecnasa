@@ -66,17 +66,19 @@ def task2():
 
 
 def task3():
-    try:
-        b = int(input('Ingresa el valor en metros de la base del triangulo\n'))
-        h = int(input('Ingresa el valor en metros de la altura del triangulo\n'))
-        if b > 0 and h > 0:
-            print(f'El area en metros del triangulo es {(b * h) / 2}')
+    print('▦' * 50)
+    print("ejercicio 3")
+    b, h = 0, 0
+    while b == 0 or h == 0:
+        try:
+            b = int(input('Ingresa el valor en metros de la base del triangulo\n'))
+            h = int(input('Ingresa el valor en metros de la altura del triangulo\n'))
+        except (TypeError, ValueError):
+            print("por favor ingresa solo números")
+    print(f'El area en metros del triangulo es {(b * h) / 2}')
 
-    except TypeError:
-        print("por favor ingresa solo números")
 
-
-# task3()
+task3()
 
 
 def task4():
