@@ -164,16 +164,16 @@ def task6():
 
 def task7():
     print('▦' * 50)
-    print("ejercicio 6")
+    print("ejercicio 7")
     n, m = 0, 0
-    while n == 0 or m == 0:
+    while n <= 0 or m <= 0:
         try:
             n = int(input('Ingresa en número n:\n'))
             m = int(input('Ingresa en número m:\n'))
         except (TypeError, ValueError):
-            print('Ingresa solo números')
+            print('Ingresa solo números positivos')
 
-    data = [num for num in range(int(n / n), int(n * m) + 1)]
+    data = [num for num in range(n, int(n * m) + 1, n)]
 
     print(data)
 
