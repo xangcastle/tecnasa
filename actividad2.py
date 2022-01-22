@@ -159,9 +159,29 @@ def task6():
     print(f'el punto mas cercano a {p1} es {p2}')
 
 
-task6()
+# task6()
 
 
+def task7():
+    print('▦' * 50)
+    print("ejercicio 6")
+    n, m = 0, 0
+    while n == 0 or m == 0:
+        try:
+            n = int(input('Ingresa en número n:\n'))
+            m = int(input('Ingresa en número m:\n'))
+        except (TypeError, ValueError):
+            print('Ingresa solo números')
+
+    data = [num for num in range(int(n / n), int(n * m) + 1)]
+
+    print(data)
 
 
+task7()
+
+
+# def task8():
+#     print('▦' * 50)
+#     print("ejercicio 8")
 
