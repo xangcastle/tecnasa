@@ -1,4 +1,5 @@
 from math import sin
+import termplotlib as tpl
 
 
 class Point:
@@ -178,10 +179,49 @@ def task7():
     print(data)
 
 
-task7()
+# task7()
 
 
-# def task8():
-#     print('▦' * 50)
-#     print("ejercicio 8")
+def task8():
+    print('▦' * 50)
+    print("ejercicio 8")
+
+
+def task9():
+    print('▦' * 50)
+    print("ejercicio 9")
+
+
+def task10():
+    print('▦' * 50)
+    print("ejercicio 10")
+    number = None
+    domain, results = [], []
+
+    def sequence(n):
+        data = list()
+        while n != 1:
+            data.append(n)
+            if n % 2 == 0:
+                n = n // 2
+            else:
+                n = (3 * n) + 1
+        data.append(1)
+        return len(data)
+
+    while not number:
+        try:
+            number = int(input("Ingresa un número entero\n"))
+            domain = list(range(1, number + 1))
+            results = [sequence(x) for x in domain]
+        except (TypeError, ValueError):
+            pass
+
+    fig = tpl.figure()
+    fig.barh(results, domain, force_ascii=True)
+    fig.show()
+
+
+task10()
+
 

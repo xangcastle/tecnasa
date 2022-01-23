@@ -5,7 +5,6 @@ from datetime import datetime
 import time
 import math
 import webbrowser
-import enum
 
 d = Dialog(dialog="dialog")
 d.set_background_title("Curso Python - Cesar Abel")
