@@ -1,5 +1,7 @@
-from math import sin
+from math import sin, cos, pi
 import termplotlib as tpl
+from skimage.draw import polygon2mask
+
 
 
 class Point:
@@ -190,6 +192,36 @@ def task8():
 def task9():
     print('▦' * 50)
     print("ejercicio 9")
+    height, width, slides = 0, 0, 0
+    while height == 0 and width == 0 and slides == 0:
+        try:
+            height = int(input("Ingresa el alto: \n"))
+            width = int(input("Ingresa el ancho: \n"))
+            slides = int(input("Ingresa la cantidad de lados: \n"))
+        except (TypeError, ValueError):
+            print("Error. Ingresa solo números positivos")
+
+    shape = (width * 4, height * 4)
+
+    def make_polygon(sides, radius=1, translation=None):
+        segment = pi * 2 / sides
+        coords = [(sin(segment * i) * radius, cos(segment * i) * radius)
+                  for i in range(sides)]
+        if translation:
+            coords = [[sum(pair) for pair in zip(point, translation)]
+                      for point in coords]
+        return coords
+
+    points = make_polygon(slides, int((height + width) // 2), translation=(int(width * 1.5), int(height * 1.5)))
+
+    img = polygon2mask(shape, points).astype(str)
+    img[img == "True"] = "*"
+    img[img == "False"] = " "
+    print(img)
+    for row in img:
+        print("".join(row))
+
+task9()
 
 
 def task10():
@@ -221,7 +253,4 @@ def task10():
     fig.barh(results, domain, force_ascii=True)
     fig.show()
 
-
-task10()
-
-
+# task10()
