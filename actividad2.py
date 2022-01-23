@@ -3,7 +3,6 @@ import termplotlib as tpl
 from skimage.draw import polygon2mask
 
 
-
 class Point:
 
     def __init__(self, x, y):
@@ -48,7 +47,7 @@ def task1():
     print(f'el valor maximo es {my_max(data)}')
 
 
-# task1()
+task1()
 
 
 def task2():
@@ -65,7 +64,7 @@ def task2():
     print(f'El area en pulgadas es {((l ** 2) * 100) / e}')
 
 
-# task2()
+task2()
 
 
 def task3():
@@ -81,7 +80,7 @@ def task3():
     print(f'El area en metros del triangulo es {(b * h) / 2}')
 
 
-# task3()
+task3()
 
 
 def task4():
@@ -100,7 +99,7 @@ def task4():
     print(f'Se está usando una escala en grados por compatibilidad con math module')
 
 
-# task4()
+task4()
 
 
 def task5():
@@ -128,7 +127,7 @@ def task5():
     print(f'El número mas cercano al {a} es {b}')
 
 
-# task5()
+task5()
 
 
 def task6():
@@ -162,7 +161,7 @@ def task6():
     print(f'el punto mas cercano a {p1} es {p2}')
 
 
-# task6()
+task6()
 
 
 def task7():
@@ -181,7 +180,7 @@ def task7():
     print(data)
 
 
-# task7()
+task7()
 
 
 def task8():
@@ -221,6 +220,7 @@ def task9():
     for row in img:
         print("".join(row))
 
+
 task9()
 
 
@@ -253,4 +253,5 @@ def task10():
     fig.barh(results, domain, force_ascii=True)
     fig.show()
 
-# task10()
+
+task10()
