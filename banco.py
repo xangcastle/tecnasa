@@ -3,7 +3,7 @@ from bottle import route, run, template
 
 @route('/')
 def index():
-    return template('<b>Hola desde nuestro sistema</b>!')
+    return ""
 
 
 @route('/hello/<name>')
